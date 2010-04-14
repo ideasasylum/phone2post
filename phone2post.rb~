@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'sinatra'
  
 set :users, {'1234' => 'hopeless'} 

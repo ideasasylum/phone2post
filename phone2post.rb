@@ -2,7 +2,7 @@ require 'sinatra'
  
 set :users, {'1234' => 'hopeless'} 
 
-get '/'
+get '/' do
 'Phone 2 Post'
 end
 

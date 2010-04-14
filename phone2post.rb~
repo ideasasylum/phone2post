@@ -17,7 +17,9 @@ post '/upload/4367803575802/:apikey' do
 
     
     # upload to posterous
-    params = {'username' => 'hopeless', 'password' => 'Claire.'} 
+    params = {'username' => 'hopeless', 'password' => 'Claire.', 'title' => 'my test post', 
+                'autopost' => '1', 'source' => 'phone2post', 'source_url' => 'http://phone2post.heroku.com',
+                'tags' => 'podcast'} 
     post_data = params.map {|k, v| Curl::PostField.content(k, v)} 
     post_data << Curl::PostField.file('media', filepath) 
     c = Curl::Easy.new('http://posterous.com/api/upload') 

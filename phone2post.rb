@@ -9,5 +9,6 @@ end
 
 post '/upload/:apikey' do
 "Hello #{params[:apikey]} #{settings.users['1234']}"
+puts params
 params[:file][:filename]
 end

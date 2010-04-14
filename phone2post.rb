@@ -8,7 +8,8 @@ get '/' do
     'Phone 2 Post'
 end
 
-post '/upload/:apikey' do
+post '/upload/4367803575802/:apikey' do
+    apikey = params[:apikey]
     user = settings.users[apikey]
     # receive mp3 recording from Tropo
     puts params.to_yaml

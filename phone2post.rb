@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+
  
 set :users, {'1234' => 'hopeless'} 
 
@@ -9,6 +10,6 @@ end
 
 post '/upload/:apikey' do
 "Hello #{params[:apikey]} #{settings.users['1234']}"
-puts params
-params[:file][:filename]
+puts params.to_yaml
+params[:filename][:filename]
 end

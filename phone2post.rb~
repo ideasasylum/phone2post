@@ -5,7 +5,7 @@ require 'curb'
 set :users, {'1234' => 'hopeless'} 
 
 get '/' do
-    'Phone 2 Post - a small application by Jamie Lawrence'
+    haml :index
 end
 
 post '/upload/4367803575802/:apikey' do

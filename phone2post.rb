@@ -38,5 +38,6 @@ __END__
 
 @@ index
 %h1 Phone 2 Post
-%p A small application by 
+%p 
+  A small application by 
   %a (href=http://ideasasylum.com) Jamie Lawrence

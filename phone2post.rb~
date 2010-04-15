@@ -32,9 +32,9 @@ end
 __END__
 
 @@ layout
-X
-= yield
-X
+%html
+  = yield
+
 
 @@ index
 %h1 Phone 2 Post

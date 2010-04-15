@@ -21,7 +21,7 @@ post '/upload/4367803575802/:apikey' do
                 'autopost' => '1', 'source' => 'phone2post', 'sourceLink' => 'http://phone2post.heroku.com',
                 'tags' => 'podcast'} 
     post_data = params.map {|k, v| Curl::PostField.content(k, v)} 
-    post_data << Curl::PostField.file('media', filepath) 
+    post_data << Curl::PostField.file('media', filepath, 'testing.mp3') 
     c = Curl::Easy.new('http://posterous.com/api/upload') 
     c.multipart_form_post = true 
     c.http_post(*post_data) 

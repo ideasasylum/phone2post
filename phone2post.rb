@@ -17,10 +17,10 @@ post '/upload/4367803575802/:apikey' do
 
     
     # upload to posterous
-    params = {'title' => 'my test post', 
+    posterous_params = {'title' => 'my test post', 
                 'autopost' => '1', 'source' => 'phone2post', 'sourceLink' => 'http://phone2post.heroku.com',
-                'tags' => 'podcast'} 
-    post_data = params.map {|k, v| Curl::PostField.content(k, v)} 
+                'tags' => 'podcast'}.merge user 
+    post_data = posterous_params.map {|k, v| Curl::PostField.content(k, v)} 
     post_data << Curl::PostField.file('media', filepath) 
     c = Curl::Easy.new('http://posterous.com/api/upload') 
     c.multipart_form_post = true 

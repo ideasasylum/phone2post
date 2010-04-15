@@ -40,4 +40,4 @@ __END__
 %h1 Phone 2 Post
 %p 
   A small application by 
-  %a(href=http://ideasasylum.com) Jamie Lawrence
+  %a(href="http://ideasasylum.com") Jamie Lawrence

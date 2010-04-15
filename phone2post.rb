@@ -29,8 +29,6 @@ post '/upload/4367803575802/:apikey' do
 end
 
 
-use_in_file_templates!
-
 __END__
 
 @@ layout

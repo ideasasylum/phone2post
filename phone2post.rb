@@ -5,7 +5,7 @@ require 'curb'
 set :users, {'1234' => 'hopeless'} 
 
 get '/' do
-    'Phone 2 Post'
+    'Phone 2 Post - a small application by Jamie Lawrence'
 end
 
 post '/upload/4367803575802/:apikey' do
@@ -26,5 +26,19 @@ post '/upload/4367803575802/:apikey' do
     c.multipart_form_post = true 
     c.http_post(*post_data) 
     puts c.body_str 
-
 end
+
+
+use_in_file_templates!
+
+__END__
+
+@@ layout
+X
+= yield
+X
+
+@@ index
+%h1 Phone 2 Post
+%p A small application by 
+  %a (href=http://ideasasylum.com) Jamie Lawrence

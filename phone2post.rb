@@ -13,12 +13,12 @@ post '/upload/4367803575802/:apikey' do
     user = settings.users[apikey]
     # receive mp3 recording from Tropo
     puts params.to_yaml
-    file = params[:filename][:tempfile]
+    file = params[:filename][:tempfile].path
 
     # rename the file
     date = Date.today.to_s
     new_file = File.join(File.dirname(file), date, File.extname(file))
-    File.rename file.path, new_file 
+    File.rename file, new_file 
     
     # upload to posterous
     posterous_params = {'title' => 'my test post', 

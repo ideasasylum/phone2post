@@ -21,9 +21,9 @@ post '/upload/4367803575802/:apikey' do
     File.rename file, new_file 
     
     # upload to posterous
-    posterous_params = {'title' => 'my test post', 
+    posterous_params = user.merge {'title' => 'my test post', 
                 'autopost' => '1', 'source' => 'phone2post', 'sourceLink' => 'http://phone2post.heroku.com',
-                'tags' => 'podcast'}.merge user 
+                'tags' => 'podcast'}
     post_data = posterous_params.map {|k, v| Curl::PostField.content(k, v)} 
     post_data << Curl::PostField.file('media', new_file) 
     c = Curl::Easy.new('http://posterous.com/api/upload') 

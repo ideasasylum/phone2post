@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'sinatra'
 require 'curb' 
-require 'ruby-debug'
 require 'yaml'
 
 set :users, YAML::load_file('posterous.yaml')

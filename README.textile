@@ -10,7 +10,7 @@ h2. Install
 h2. Configuration
 
 Edit posterous.yaml as shown below:
-  --- 
+.pre  --- 
   "0000": 
     username: myemail@domain.com
     password: mysecretpassword

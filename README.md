@@ -12,15 +12,15 @@ Configuration
 -------------
 Edit posterous.yaml as shown below:
 
-  --- 
-  "0000": 
-    username: myemail@domain.com
-    password: mysecretpassword
-    site_id: posterous_site_id
+    --- 
+    "0000": 
+        username: myemail@domain.com
+        password: mysecretpassword
+        site_id: posterous_site_id
 
 where posterous_site_id can be found by executing:
 
-  curl -u myemail@domain.com:mysecretpassword http://posterous.com/api/getsites
+    curl -u myemail@domain.com:mysecretpassword http://posterous.com/api/getsites
 
 Operation
 ---------

@@ -20,8 +20,8 @@ post '/upload/4367803575802/:apikey' do
     filepath ||= file.path
 
     # rename the file
-    date = Date.today.to_s
-    new_file = File.join(File.dirname(filepath), date+'.mp3')
+    date = Date.today
+    new_file = File.join(File.dirname(filepath), "#{date.year}#{date.month}#{date.day}.mp3")
     File.rename filepath, new_file 
     
     # upload to posterous

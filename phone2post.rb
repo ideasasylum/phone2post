@@ -21,8 +21,8 @@ post '/upload/4367803575802/:apikey' do
 
     # rename the file
     date = Date.today.to_s
-    new_file = File.join(File.dirname(file), date+'.mp3')
-    File.rename file, new_file 
+    new_file = File.join(File.dirname(filepath), date+'.mp3')
+    File.rename filepath, new_file 
     
     # upload to posterous
     posterous_params = user.merge({'autopost' => '1', 'source' => 'phone2post', 

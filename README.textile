@@ -1,0 +1,23 @@
+h1. Phone2Post
+A simple "Tropo":http://www.tropo.com script and Sinatra application which records a podcast over the phone and then posts the mp3 to Posterous
+
+h2. Install
+For the server: clone this repo, copy example_posterous.yaml to posterous.yaml and edit as shown below. Push to heroku. 
+For the telephony part: upload tropo.rb to Tropo, and change the URL to point to your server.
+
+h2. Configuration
+Edit posterous.yaml as shown below:
+  --- 
+  "0000": 
+    username: myemail@domain.com
+    password: mysecretpassword
+    site_id: posterous_site_id
+
+where posterous_site_id can be found by executing:
+  curl -u myemail@domain.com:mysecretpassword http://posterous.com/api/getsites
+
+h2. Operation
+ # Phone the number provide by Tropo
+ # Listen to the prompt and enter your 4 digit PIN code
+ # When prompted, record your podcast and press # to post
+ # Tropo will send the mp3 file to your Sinatra app, which will send it to Posterous, which can autobroadcast it to the world!

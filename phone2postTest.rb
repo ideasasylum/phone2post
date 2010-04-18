@@ -14,14 +14,13 @@ class Phone2PostTest < Test::Unit::TestCase
   include Rack::Test::Methods
 
   def app
-    test_file = File.open('test_upload', 'w')
-    test_file << 'Hello'
-    test_file.close
     Sinatra::Application
   end
 
   def test_it_uploads_a_file
-    post '/upload/4367803575802/1234', {:filename => {:tempfile => 'test_upload'}, :apikey => '1234'}
+    test_file = 'test.mp3'
+    File.copy test_file, 'upload.mp3'
+    post '/upload/4367803575802/1234', {:filename => {:tempfile => 'upload.mp3'}, :apikey => '1234'}
     assert last_response.ok?
   end
   

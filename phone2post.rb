@@ -50,5 +50,5 @@ __END__
 @@ index
 %h1 Phone 2 Post
 %p 
-  A small application by 
-  %a(href="http://ideasasylum.com") Jamie Lawrence
+  A small application which allows users to record podcasts over the phone and send them to Posterous &mdash; by 
+  %a(href="http://ideasasylum.com") Jamie Lawrence. 

@@ -4,12 +4,14 @@ A simple [Tropo](http://www.tropo.com) script and Sinatra application which reco
 
 Install
 -------
-*For the server:* clone this repo, copy example_posterous.yaml to posterous.yaml and edit as shown below. Push to [Heroku](http://heroku.com). 
+*For the server:* clone this repo, copy example_posterous.yaml to posterous.yaml and edit as shown below. Push to [Heroku](http://heroku.com).
+
 *For the telephony part:* upload tropo.rb to Tropo, and change the URL to point to your server.
 
 Configuration
 -------------
 Edit posterous.yaml as shown below:
+
   --- 
   "0000": 
     username: myemail@domain.com
@@ -17,6 +19,7 @@ Edit posterous.yaml as shown below:
     site_id: posterous_site_id
 
 where posterous_site_id can be found by executing:
+
   curl -u myemail@domain.com:mysecretpassword http://posterous.com/api/getsites
 
 Operation
